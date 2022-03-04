@@ -1,0 +1,96 @@
+@use "sass:math";
+
+/*
+* RAD HELPER MIXINS
+* Defaults mixins setup
+*/
+
+// Responsive mixin
+@mixin responsive($min, $max: 0) {
+  @if $max != 0 {
+    @media only screen and (min-width: $min) and (max-width: calc(#{$max} - 1px)) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: $min) {
+      @content;
+    }
+  }
+}
+
+// Font face mixin for local fonts
+@mixin font-face($family, $file, $weight : normal, $style : normal) {
+  font-family: $family;
+  src:  url(#{$file}.woff2) format('woff2'),
+        url(#{$file}.woff) format('woff');
+  font-style: $style;
+  font-weight: $weight;
+  text-rendering: optimizeLegibility;
+}
+
+@mixin font-size($fs, $lh: 999, $ls: 0) {
+  @if unitless($fs) and $fs != 0 {
+    $fsrem: math.div($fs, 10);
+    font-size: #{$fsrem}rem;
+  } @else {
+    font-size: $fs;
+  }
+
+  @if $lh != 999 {
+    @if unitless($lh) and $lh != 0 {
+      $lhrem: math.div($lh, 10);
+      line-height: #{$lhrem}rem;
+    } @else {
+      line-height: #{$lh};
+    }
+  }
+
+  @if $ls != 0 {
+    @if unitless($ls) {
+      letter-spacing: #{$ls}px;
+    } @else {
+      letter-spacing: #{$ls};
+    }
+  }
+}
+
+@mixin hover {
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+@mixin hover-focus {
+	@include hover {
+		@content;
+	}
+	&:focus {
+		@content;
+	}
+}
+
+@mixin button-primary {
+  border-radius: 3px;
+  background: none;
+  color: $white;
+  border: 2px solid $white;
+  justify-self: end;
+  padding: 10px 20px;
+  transition: color 0.1s, background-color 0.1s;
+  white-space: nowrap;
+  z-index: 3;
+
+  @media(hover) {
+    &:hover {
+      background: $white;
+      color: $black;
+    }
+  }
+
+  &:active {
+    background: $white;
+    color: $black;
+  }
+}

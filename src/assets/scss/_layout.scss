@@ -1,0 +1,61 @@
+/*-------------------------------------------------------------------
+	BASE LAYOUT ZONES
+-------------------------------------------------------------------*/
+:root {
+  --gg: 30px;
+  --lp: #{$layout-padding};
+  --lc: 12;
+  --lw: #{$layout-width};
+  --cw: calc(((100vw - (2 * var(--lp))) - ((var(--lc) - 1) * var(--gg))) / var(--lc));
+  --cwg: calc(var(--cw) + var(--gg));
+
+  // Media Query : Large screen and up
+  @include responsive($large) {
+    --cw: calc((var(--lw) - ((var(--lc) - 1) * var(--gg))) / var(--lc));
+  }
+
+  // Media Query : Large screen only
+  @include responsive($desktop, $large) {
+    --lp: 100px;
+  }
+
+  // Media Query : Desktop only
+  @include responsive($medium, $desktop) {
+    --lp: 80px;
+  }
+
+  // Media Query : Tablet and up
+  @include responsive($tablet, $medium) {
+    --lp: 60px;
+  }
+
+  // Media Query : Tablet only
+  @include responsive($mobile, $tablet) {
+    --lp: 40px;
+    --gg: 20px;
+  }
+
+  // Media Query : Mobile only
+  @include responsive(0, $mobile) {
+    --lp: 20px;
+    --gg: 10px;
+    --lc: 6;
+  }
+}
+
+.lw,
+.layout-wrapper {
+  box-sizing: border-box;
+  display: grid;
+  gap: 0 var(--gg);
+  grid-template-columns: repeat(var(--lc), 1fr);
+  margin: 0 auto;
+  max-width: calc(var(--lw) + (2 * var(--lp)));
+  padding: 0 var(--lp);
+  position: relative;
+  width: 100%;
+
+  &--block {
+    display: block;
+  }
+}

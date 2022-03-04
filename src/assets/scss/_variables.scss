@@ -1,0 +1,61 @@
+/*
+* RAD HELPER VARIABLES
+* Defaults project variables
+*/
+
+// TODO: CHECK BEN FRED
+
+// ==================================================
+// Colors
+// ==================================================
+
+$white: #FDFDFD;
+$black: #000000;
+
+$c-error: #f55353;
+$c-warning: #ffbb33;
+$c-success: #53a653;
+
+
+// ==================================================
+// Fonts
+// ==================================================
+
+$roboto: 'Roboto', sans-serif;
+$ff-main: $roboto;
+
+$acme: 'Acme', sans-serif;
+$ff-alt: $acme;
+
+// ==================================================
+// Spacing
+// ==================================================
+$layout-width: 1120px;
+$layout-padding: 120px;
+
+// ==================================================
+// Breakpoints
+// ==================================================
+$xsmall: 320px;
+$small: 480px;
+$smedium: 600px;
+$mobile: $smedium;
+$tablet: 768px;
+$medium: 900px;
+$desktop: 1024px;
+$large: 1200px;
+$xlarge: 1600px;
+$portrait: (orientation portrait);
+$landscape: (orientation landscape);
+$print: print;
+
+$transition-default: 0.3s ease-out;
+
+// ==================================================
+// Transitions
+// ==================================================
+
+$cb-easeInOutQuart: cubic-bezier(0.76, 0, 0.24, 1);
+$cb-easeOutCubic: cubic-bezier(0.33, 1, 0.68, 1);
+$cb-1: $cb-easeInOutQuart;
+$cb-2: $cb-easeOutCubic;
