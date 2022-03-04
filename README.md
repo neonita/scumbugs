@@ -1,2 +1,4 @@
-# wetransfer_scumbugs-webapp_2022-03-03_2042
+# Scumbugs
+
+This is a scumbug repository. This is a scumbug draft. Pushed by yours truly, another scumbug.
  
