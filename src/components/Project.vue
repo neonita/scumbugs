@@ -5,41 +5,49 @@
       <ul class="convo">
         <li class="convo__element">
           <div class="convo__avatar">
-            <ResponsiveImage :sources="user1" />
+            <ResponsiveImage :sources="user2" />
           </div>
-          <span class="convo__user">BUG 1</span>
+          <span class="convo__user">🐌 Wholesome Scum</span>
           <div class="convo__text">
             <p>
               Bugs are curious creatures by nature, so it’s no surprise one once
               ventured into a computer.
             </p>
             <p>
-              Decades ago, guided by the blinking lights of a circuit chip, an
-              adventurous moth flew into a CPU. The insect, looking for the
-              light source, instead found the source
+              That morning of September 1947, an adventurous moth crept into a
+              CPU while looking for the light source. The software wasn't
+              programmed to host organisms and sparked a new species and the
+              spirit of the moth was passed into the network. For generations,
+              computer nerds throughout the world considered a "bug" to be a
+              glitch in an operating system. We now know what every software bug
+              has always been, this new species of digital life: a scumbug, a
+              digital descendant of the original moth.
             </p>
             <p>
-              The software wasn’t programmed to host a life form and immediately
-              shut down. The system had to be debugged and the device rebooted.
-              But the spirit of the moth was passed onto the network.
+              Fast forward thirty odd years and not only have computing machines
+              greatly evolved, so have the Scumbugs. Six types of these
+              computerized insectia, bred in the computer world, were ready to
+              hatch.
             </p>
             <p>
-              That morning of January 1980, when the moth of yore hit the core
-              of the processor, it cocooned into a new species of digital life:
-              the scumbug. What came out of the pupa were six new types of
-              computerized insectia. Ever since, the Scumbugs have been evolving
-              into homebodies versions of their intrepid ancestor - up until
-              very recently, when they finally banded together to infest the
-              blockchain. There, in hope of looking the original scum in the
-              eye, they [bug buzzing loudly]
+              From January 1st, 1980 to the very end of the year 2021, a scumbug
+              was born daily into cyberspace. Although different in allure, each
+              shared the intrepid character of their mother-moth.
             </p>
+            <p>
+              Today, the Scumbugs are banding together in order to infest the
+              blockchain. There, in hopes of looking the original scum in the
+              eye, they….
+            </p>
+            <br />
+            <p class="bold">[bug buzzing loudly]</p>
           </div>
         </li>
         <li class="convo__element">
           <div class="convo__avatar">
             <ResponsiveImage :sources="user2" />
           </div>
-          <span class="convo__user">BUG 2</span>
+          <span class="convo__user">🦟 Bruno</span>
           <div class="convo__text">
             <p>lol wtf are you snailing about just buzz me in</p>
           </div>
@@ -48,59 +56,60 @@
           <div class="convo__avatar">
             <ResponsiveImage :sources="user1" />
           </div>
-          <span class="convo__user">BUG 1</span>
+          <span class="convo__user">🐌 Wholesome Scum</span>
           <div class="convo__text">
-            <p>Fucking hell, whatever. Here:</p>
-            <p>WHAT? ABOUT SCUMBUGS</p>
             <p>
-              Scumbugs is a collection of 15 341 unique bugs infesting the
-              Ethereum blockchain. Bred at the intersection of generative art
-              and creative coding, every scumbug is generated with randomly
-              seeded values, issued at the moment of the NFT mint transaction
+              I was in the midst of explaining something good for nothing pest.
+              I just buzzed you in, c’mon up and make sure to wipe all of your
+              dusty feet on the rug before you enter my home bub
+            </p>
+            <p class="bold">ABOUT <span class="italic">SCUMBUGS</span></p>
+            <p>
+              Scumbugs are a collection of 15,341 unique on-chain bugs infesting
+              the Ethereum Network. Bred at the intersection of generative art
+              and creative coding, each scumbug is generated with randomly
+              seeded values, issued at the moment of an NFT mint transaction
               hash.
             </p>
             <ul>
               <li>
                 There are 6 species of Scumbugs: Mantis, Caterpillar, Snail,
-                Mosquito, Fly and Moth;
+                Mosquito, Fly, and Moth.
               </li>
               <li>
-                Each scumbug has a unique look, formed by the haphazard
-                combination of seven character attributes and mystical eyes with
-                a sui generis iris showcasing an exclusive generative artwork;
+                Each scumbug has a unique look - the result of a randomized
+                combination of seven character attributes.
               </li>
               <li>
-                Each scumbug has its own birthday, as all 15 341 insects were
-                bred between January 1st 1980 and December 31st 2021.
-                Anniversaries, along with a few key Holidays, will mark a
-                special occasion to create a deeper digital bond between the
-                user and its scumbug;
+                Each scumbug has a unique stare showcasing an exclusive
+                generative work of art.
               </li>
               <li>
-                Each scumbug metadata is 100% stored on the Ethereum blockchain
-                and its artwork is hosted permanently on the Arweave blockchain;
+                Each scumbug has its own birthday, as all 15,341 insects emerged
+                from their eggs between January 1st, 1980, and December 31st,
+                2021.
               </li>
               <li>
-                Each scumbug is originally made in SVG (Scalable Vector
-                Graphic), so they can eventually become bigger than you. They
-                are displayed as a PNG image for the user experience, but SVG
-                will be available for owners;
+                Each scumbug’s metadata is 100% stored on the Ethereum
+                blockchain and its artwork is hosted permanently on the Arweave
+                blockchain.
               </li>
               <li>
-                15 000 Scumbugs will be released on the drop date, on XXX
-                INSCRIRE DATE XXX. 341 other Scumbugs will be held for giveaways
-                and various events;
+                341 Scumbugs will be reserved for giveaways, incentives for
+                hirings, and other purposes that help grow and sustain the
+                project.
               </li>
               <li>
-                Scumbugs collectibles are a genesis project acting as a member
-                pass to the Scumbugs digital universe. The full Scumbugs
-                experience will grow as the Scumbugs community does too;
+                The Scumbugs collection and its digital universe is the genesis
+                project of (lab name). Building a strong IP (intellectual
+                property) for the Scumbugs universe will remain the top priority
+                when exploring further cyber-ecosystem development.
               </li>
-              <li>
+              <!-- <li>
                 40% of the primary sales and 50% of the royalties will be
                 redistributed to the Scumbugs community treasury, in order to
                 finance its ever growing experience.
-              </li>
+              </li> -->
             </ul>
           </div>
         </li>
@@ -136,6 +145,14 @@ export default {
 <style lang="scss">
 @import "@/assets/scss/variables";
 @import "@/assets/scss/mixins";
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
 
 .convo {
   grid-column: 2 / 11;
