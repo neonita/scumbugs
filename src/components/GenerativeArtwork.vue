@@ -1,7 +1,7 @@
 <template>
   <section class="text generative" id="generative-artwork">
     <div class="lw">
-      <h2 class="title">Scumbugs' Iris Generative Art</h2>
+      <h2 class="title">Iris Generative Art</h2>
     </div>
     <div class="images">
       <div class="image" v-for="image in images" :key="image.description">
@@ -9,25 +9,21 @@
       </div>
     </div>
     <div class="lw">
-      <p>Every scumbug offers a gaze like you’ve never seen before.</p>
+      <p>Every scumbug has a gaze like you’ve never seen before.</p>
       <p>
-        When the first proper computer bug happened, the metaworld was seen
-        through the eyes of an insect. That original gawk, every scumbug shares
-        it: in their eyes, all 15 341 Scumbugs have irises that act as a direct
-        link to their ancestral moth. It’s a visual essay of what the moth of
-        yore has seen before.
+        Made with generative art, a practice that involves both technical
+        prowess and a creative process, the Scumbugs’ irises have something
+        mystical about them: they are generated based on randomly seeded values
+        from the minting transaction hash.
       </p>
       <p>
-        Made in generative art, a practice that involves both technical prowess
-        and a creative process, the Scumbugs’ irises have something
-        mathematically mystical about them. The irises are generated based on
-        randomly seeded values from the transaction hash. These values vary in
-        value, too.
+        Each iris is an artifact of their ancestor DNA and portrays fragments of
+        what their ancestor once saw. The transaction hash IS the DNA.
       </p>
       <p>
-        Annoyingly vague, you say? Let’s put it this way: each pair of eyes has
-        a unique artwork, just like each scumbug has a unique style,
-        personality, birthday, and DNA.
+        All this is a little vague, you say? Let’s just put it this way then:
+        each pair of eyes has a unique work of art, just like each scumbug has a
+        unique style, personality, birthday, and DNA!
       </p>
     </div>
   </section>
