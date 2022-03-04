@@ -1,15 +1,33 @@
 <template>
   <section class="text road" id="roadmap">
     <div class="lw">
-      <h2 class="title">Road map</h2>
-      <p>Jusqu'en 2005, il partage dès lors ses activités entre la France et le Québec. Il enseigne la musique électroacoustique à l'Université de Montréal de 1980 à 1996, en plus de participer activement à l'organisation de nombreux événements.</p>
-      <p>Il reçoit une première consécration en 1981 pour sa pièce Sous le regard d’un soleil noir, à partir de textes du psychiatre Ronald D. Laing sur la schizophrénie. L'œuvre remporte le premier prix du 9e Concours international de musique électroacoustique de Bourges et paraîtra sur disque l'année suivante. La carrière de Dhomont prend alors son envol. Il est régulièrement invité à se produire dans les festivals, reçoit des commandes, participe à des émissions radiophoniques où ses qualités de communicateur et ses connaissances en font un interlocuteur apprécié.</p>
+      <h2 class="title">Roadmap</h2>
+      <p>
+        No one could have guessed that a simple moth and a primitive computer
+        could create a new species of digital bugs. And nobody can predict what
+        an intricate insect and a sophisticated metaworld could lead to. 👀
+      </p>
+
+      <p>
+        Bugs have been crawling the Earth for 400 million years, and the
+        metaverse is only beginning to host life. In the physical world, just
+        like the digital cyberspace, bugs were one of the first lifeforms to
+        proliferate. A true bug can tough it out in the harshest conditions and
+        overcome the toughest challenges. Just imagine how easily Scumbugs will
+        thrive in an environment optimized for a great user experience…
+      </p>
+
+      <p>
+        Ownership over a scumbug is the doorway into a bug’s e-life. Immerse
+        yourself in the world of NFT’s but with a hedonistic, counter-culture
+        twist that can’t be found anywhere else!
+      </p>
     </div>
   </section>
 </template>
 
 <style lang="scss">
-  .text.road {
-    background: #f8dfe8;
-  }
+.text.road {
+  background: #f8dfe8;
+}
 </style>
