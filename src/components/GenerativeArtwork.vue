@@ -20,10 +20,11 @@
         Each iris is an artifact of their ancestor DNA and portrays fragments of
         what their ancestor once saw. The transaction hash IS the DNA.
       </p>
+      <p>All this is a little vague, you say?</p>
       <p>
-        All this is a little vague, you say? Let’s just put it this way then:
-        each pair of eyes has a unique work of art, just like each scumbug has a
-        unique style, personality, birthday, and DNA!
+        Let’s just put it this way then: each pair of eyes has a unique work of
+        art, just like each scumbug has a unique style, personality, birthday,
+        and DNA!
       </p>
     </div>
   </section>

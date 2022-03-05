@@ -7,7 +7,7 @@
           <div class="convo__avatar">
             <ResponsiveImage :sources="user2" />
           </div>
-          <span class="convo__user">🐌 Wholesome Scum</span>
+          <span class="convo__user">🐌 Wholesum Scum</span>
           <div class="convo__text">
             <p>
               Bugs are curious creatures by nature, so it’s no surprise one once
@@ -56,7 +56,7 @@
           <div class="convo__avatar">
             <ResponsiveImage :sources="user1" />
           </div>
-          <span class="convo__user">🐌 Wholesome Scum</span>
+          <span class="convo__user">🐌 Wholesum Scum</span>
           <div class="convo__text">
             <p>
               I was in the midst of explaining something good for nothing pest.
@@ -105,11 +105,6 @@
                 property) for the Scumbugs universe will remain the top priority
                 when exploring further cyber-ecosystem development.
               </li>
-              <!-- <li>
-                40% of the primary sales and 50% of the royalties will be
-                redistributed to the Scumbugs community treasury, in order to
-                finance its ever growing experience.
-              </li> -->
             </ul>
           </div>
         </li>
@@ -125,14 +120,14 @@ export default {
   data() {
     return {
       user1: [
+        require("@/assets/images/team/wholesum_desktop.png"),
+        require("@/assets/images/team/wholesum_desktop.png"),
+        require("@/assets/images/team/wholesum_large.png"),
+      ],
+      user2: [
         require("@/assets/images/team/bruno_desktop.png"),
         require("@/assets/images/team/bruno_desktop.png"),
         require("@/assets/images/team/bruno_large.png"),
-      ],
-      user2: [
-        require("@/assets/images/team/0xtina_desktop.png"),
-        require("@/assets/images/team/0xtina_desktop.png"),
-        require("@/assets/images/team/0xtina_large.png"),
       ],
     };
   },
