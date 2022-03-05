@@ -5,7 +5,7 @@
       <ul class="convo">
         <li class="convo__element">
           <div class="convo__avatar">
-            <ResponsiveImage :sources="user2" />
+            <ResponsiveImage :sources="user1" />
           </div>
           <span class="convo__user">🐌 Wholesum Scum</span>
           <div class="convo__text">
@@ -173,7 +173,7 @@ export default {
     align-items: center;
     border-radius: 20px;
     display: grid;
-    gap: 20px;
+    gap: 5px 20px;
     padding: 20px;
     grid-template-columns: 60px 1fr;
     margin-bottom: 30px;
