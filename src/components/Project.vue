@@ -7,7 +7,7 @@
           <div class="convo__avatar">
             <ResponsiveImage :sources="user1" />
           </div>
-          <span class="convo__user">🐌 Wholesum Scum</span>
+          <span class="convo__user">Wholesum Scum</span>
           <div class="convo__text">
             <p>
               Bugs are curious creatures by nature, so it’s no surprise one once
@@ -47,7 +47,7 @@
           <div class="convo__avatar">
             <ResponsiveImage :sources="user2" />
           </div>
-          <span class="convo__user">🦟 Bruno</span>
+          <span class="convo__user">Bruno</span>
           <div class="convo__text">
             <p>lol wtf are you snailing about just buzz me in</p>
           </div>
@@ -56,7 +56,7 @@
           <div class="convo__avatar">
             <ResponsiveImage :sources="user1" />
           </div>
-          <span class="convo__user">🐌 Wholesum Scum</span>
+          <span class="convo__user">Wholesum Scum</span>
           <div class="convo__text">
             <p>
               I was in the midst of explaining something good for nothing pest.
