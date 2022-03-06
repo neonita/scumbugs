@@ -49,7 +49,7 @@
           </div>
           <span class="convo__user">Bruno</span>
           <div class="convo__text">
-            <p>lol wtf are you snailing about just buzz me in</p>
+            <p>Looool bo0oOooring! Just drop the alpha already!</p>
           </div>
         </li>
         <li class="convo__element">
@@ -65,7 +65,7 @@
             </p>
             <p class="bold">ABOUT <span class="italic">SCUMBUGS</span></p>
             <p>
-              Scumbugs are a collection of 15,341 unique on-chain bugs infesting
+              Scumbugs is a collection of 15,341 unique on-chain bugs infesting
               the Ethereum Network. Bred at the intersection of generative art
               and creative coding, each scumbug is generated with randomly
               seeded values, issued at the moment of an NFT mint transaction
