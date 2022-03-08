@@ -7,63 +7,76 @@
           <div class="convo__avatar">
             <ResponsiveImage :sources="user1" />
           </div>
-          <span class="convo__user">·ï¡÷¡ï· og_snail ·ï¡÷¡ï·</span>
-          <div class="convo__text">
-            <p>
-              Bugs are curious creatures by nature, so it’s no surprise one once
-              ventured into a computer.
-            </p>
-            <p>
-              That morning of September 1947, an adventurous moth crept into a
-              CPU while looking for the light source. The software wasn't
-              programmed to host organisms and sparked a new species and the
-              spirit of the moth was passed into the network. For generations,
-              computer nerds throughout the world considered a "bug" to be a
-              glitch in an operating system. We now know what every software bug
-              has always been, this new species of digital life: a scumbug, a
-              digital descendant of the original moth.
-            </p>
-            <p>
-              Fast forward thirty odd years and not only have computing machines
-              greatly evolved, so have the Scumbugs. Six types of these
-              computerized insectia, bred in the computer world, were ready to
-              hatch.
-            </p>
-            <p>
-              From January 1st, 1980 to the very end of the year 2021, a scumbug
-              was born daily into cyberspace. Although different in allure, each
-              shared the intrepid character of their mother-moth.
-            </p>
-            <p>
-              Today, the Scumbugs are banding together in order to infest the
-              blockchain. There, in hopes of looking the original scum in the
-              eye, they….
-            </p>
-            <br />
-            <p class="bold">[bug buzzing loudly]</p>
+          <div class="convo__thread">
+            <div class="convo__user">
+              <span class="convo__name og_snail">·ï¡÷¡ï· og_snail ·ï¡÷¡ï·</span>
+              <span class="convo__timestamp">03/08/2022</span>
+            </div>
+            <div class="convo__text">
+              <p>
+                Bugs are curious creatures by nature, so it’s no surprise one
+                once ventured into a computer.
+              </p>
+              <p>
+                That morning of September 1947, an adventurous moth crept into a
+                CPU while looking for the light source. The software wasn't
+                programmed to host organisms and sparked a new species and the
+                spirit of the moth was passed into the network. For generations,
+                computer nerds throughout the world considered a "bug" to be a
+                glitch in an operating system. We now know what every software
+                bug has always been, this new species of digital life: a
+                scumbug, a digital descendant of the original moth.
+              </p>
+              <p>
+                Fast forward thirty odd years and not only have computing
+                machines greatly evolved, so have the Scumbugs. Six types of
+                these computerized insectia, bred in the computer world, were
+                ready to hatch.
+              </p>
+              <p>
+                From January 1st, 1980 to the very end of the year 2021, a
+                scumbug was born daily into cyberspace. Although different in
+                allure, each shared the intrepid character of their mother-moth.
+              </p>
+              <p>
+                Today, the Scumbugs are banding together in order to infest the
+                blockchain. There, in hopes of looking the original scum in the
+                eye, they….
+              </p>
+              <p class="bold" style="margin-top: 2em">[bug buzzing loudly]</p>
+            </div>
           </div>
         </li>
         <li class="convo__element">
           <div class="convo__avatar">
             <ResponsiveImage :sources="user2" />
           </div>
-          <span class="convo__user">n0rman</span>
-          <div class="convo__text">
-            <p>Looool bo0oOooring! Just drop the alpha already!</p>
+          <div class="convo__thread">
+            <div class="convo__user">
+              <span class="convo__name n0rman">n0rman</span>
+              <span class="convo__timestamp">03/08/2022</span>
+            </div>
+            <div class="convo__text">
+              <p>Looool bo0oOooring! Just drop the alpha already!</p>
+            </div>
           </div>
         </li>
         <li class="convo__element">
           <div class="convo__avatar">
             <ResponsiveImage :sources="user1" />
           </div>
-          <span class="convo__user">ï¡÷¡ï· og_snail ·ï¡÷¡ï·</span>
-          <div class="convo__text">
-            <p>
-              I was in the midst of explaining something good for nothing pest.
-              I just buzzed you in, c’mon up and make sure to wipe all of your
-              dusty feet on the rug before you enter my home bub
-            </p>
-            <!-- <p class="bold">ABOUT <span class="italic">SCUMBUGS</span></p>
+          <div class="convo__thread">
+            <div class="convo__user">
+              <span class="convo__name og_snail">·ï¡÷¡ï· og_snail ·ï¡÷¡ï·</span>
+              <span class="convo__timestamp">03/08/2022</span>
+            </div>
+            <div class="convo__text">
+              <p>
+                I was in the midst of explaining something good for nothing
+                pest. I just buzzed you in, c’mon up and make sure to wipe all
+                of your dusty feet on the rug before you enter my home bub
+              </p>
+              <!-- <p class="bold">ABOUT <span class="italic">SCUMBUGS</span></p>
             <p>
               Scumbugs is a collection of 15,341 unique on-chain bugs infesting
               the Ethereum Network. Bred at the intersection of generative art
@@ -106,7 +119,8 @@
                 when exploring further cyber-ecosystem development.
               </li>
             </ul> -->
-            <!-- /.convo__text -->
+              <!-- /.convo__text -->
+            </div>
           </div>
           <!-- /. convo__element -->
         </li>
@@ -155,12 +169,16 @@ export default {
   // grid-column: 2 / 11; // ref _layout.scss // 12 cols // actually does nothing due to display: block override in Scene.vue line 221
   margin: 0;
   padding: 0;
-  border: 2px solid blue;
 
   p,
   ul {
     line-height: 1.2;
     margin-bottom: 1em;
+    color: rgb(61, 61, 61);
+  }
+
+  p:nth-of-type(1) {
+    margin-top: 0.5em;
   }
 
   ul {
@@ -169,18 +187,15 @@ export default {
 
   li {
     list-style: disc;
-    margin-bottom: 0.75em;
+    // margin-bottom: 0.75em;
+    margin-bottom: 1.5em;
   }
 
   &__element {
-    align-items: center;
-    border-radius: 20px;
     display: grid;
-    gap: 5px 20px;
-    padding: 20px;
     grid-template-columns: 60px 1fr;
-    margin-bottom: 30px;
-    // border: 2px solid #b3aea0;
+    gap: 5px 20px;
+    padding: 0 20px;
 
     @include responsive(0, $mobile) {
       grid-template-columns: 40px 1fr;
@@ -199,14 +214,36 @@ export default {
     }
   }
 
+  &__thread {
+    display: grid;
+    grid-template-rows: 25px auto;
+  }
+
   &__user {
-    font-weight: 800;
-    grid-column: 2 / -1;
+    align-items: flex-end;
     display: flex;
+    gap: 0 0.5em;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__timestamp {
+    color: grey;
+    font-size: x-small;
   }
 
   &__text {
     grid-column: 2 / -1;
   }
+}
+
+.og_snail {
+  color: #c75454;
+}
+
+.n0rman {
+  color: #d89658;
 }
 </style>
