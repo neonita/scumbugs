@@ -209,7 +209,7 @@ export default {
   box-sizing: border-box;
 
   @include responsive(0, $mobile) {
-    margin-top: -1vh;
+    margin-top: -5vh;
     padding: 60px 0;
   }
 
