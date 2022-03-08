@@ -1,7 +1,9 @@
 <template>
   <section class="scene">
     <div class="scene__button_container">
-      <h1 class="scene__title">One upon a time in Melissa Land</h1>
+      <h1 class="scene__title">
+        Once upon a time, deep in the sun-kissed meadow...
+      </h1>
     </div>
     <div class="scene__top">
       <ResponsiveImage

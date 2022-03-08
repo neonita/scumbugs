@@ -230,8 +230,8 @@ export default {
   }
 
   &__timestamp {
-    color: grey;
-    font-size: x-small;
+    color: rgb(156, 156, 156);
+    font-size: small;
   }
 
   &__text {
