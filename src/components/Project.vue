@@ -7,7 +7,7 @@
           <div class="convo__avatar">
             <ResponsiveImage :sources="user1" />
           </div>
-          <span class="convo__user">Wholesum Scum</span>
+          <span class="convo__user">·ï¡÷¡ï· og_snail ·ï¡÷¡ï·</span>
           <div class="convo__text">
             <p>
               Bugs are curious creatures by nature, so it’s no surprise one once
@@ -47,7 +47,7 @@
           <div class="convo__avatar">
             <ResponsiveImage :sources="user2" />
           </div>
-          <span class="convo__user">Bruno</span>
+          <span class="convo__user">n0rman</span>
           <div class="convo__text">
             <p>Looool bo0oOooring! Just drop the alpha already!</p>
           </div>
@@ -56,14 +56,14 @@
           <div class="convo__avatar">
             <ResponsiveImage :sources="user1" />
           </div>
-          <span class="convo__user">Wholesum Scum</span>
+          <span class="convo__user">ï¡÷¡ï· og_snail ·ï¡÷¡ï·</span>
           <div class="convo__text">
             <p>
               I was in the midst of explaining something good for nothing pest.
               I just buzzed you in, c’mon up and make sure to wipe all of your
               dusty feet on the rug before you enter my home bub
             </p>
-            <p class="bold">ABOUT <span class="italic">SCUMBUGS</span></p>
+            <!-- <p class="bold">ABOUT <span class="italic">SCUMBUGS</span></p>
             <p>
               Scumbugs is a collection of 15,341 unique on-chain bugs infesting
               the Ethereum Network. Bred at the intersection of generative art
@@ -105,8 +105,10 @@
                 property) for the Scumbugs universe will remain the top priority
                 when exploring further cyber-ecosystem development.
               </li>
-            </ul>
+            </ul> -->
+            <!-- /.convo__text -->
           </div>
+          <!-- /. convo__element -->
         </li>
       </ul>
     </div>
@@ -120,14 +122,14 @@ export default {
   data() {
     return {
       user1: [
-        require("@/assets/images/team/wholesum_desktop.png"),
-        require("@/assets/images/team/wholesum_desktop.png"),
-        require("@/assets/images/team/wholesum_large.png"),
+        require("@/assets/images/scene/OG_snail.png"),
+        require("@/assets/images/scene/OG_snail.png"),
+        require("@/assets/images/scene/OG_snail.png"),
       ],
       user2: [
-        require("@/assets/images/team/bruno_desktop.png"),
-        require("@/assets/images/team/bruno_desktop.png"),
-        require("@/assets/images/team/bruno_large.png"),
+        require("@/assets/images/scene/norman.png"),
+        require("@/assets/images/scene/norman.png"),
+        require("@/assets/images/scene/norman.png"),
       ],
     };
   },
@@ -150,9 +152,10 @@ export default {
 }
 
 .convo {
-  grid-column: 2 / 11;
+  // grid-column: 2 / 11; // ref _layout.scss // 12 cols // actually does nothing due to display: block override in Scene.vue line 221
   margin: 0;
   padding: 0;
+  border: 2px solid blue;
 
   p,
   ul {
@@ -177,7 +180,7 @@ export default {
     padding: 20px;
     grid-template-columns: 60px 1fr;
     margin-bottom: 30px;
-    border: 2px solid #b3aea0;
+    // border: 2px solid #b3aea0;
 
     @include responsive(0, $mobile) {
       grid-template-columns: 40px 1fr;
