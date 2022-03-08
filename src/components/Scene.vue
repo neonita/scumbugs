@@ -53,9 +53,9 @@ export default {
         require("@/assets/images/scene/top_scene_large.png"),
       ],
       mainScene: [
-        require("@/assets/images/scene/main_scene_mobile.png"),
-        require("@/assets/images/scene/main_scene_desktop.png"),
-        require("@/assets/images/scene/main_scene_large.png"),
+        require("@/assets/images/scene/illu_website_main_v2.png"),
+        require("@/assets/images/scene/illu_website_main_v2.png"),
+        require("@/assets/images/scene/illu_website_main_v2.png"),
       ],
       topSceneLoaded: false,
       mainSceneLoaded: false,
@@ -209,6 +209,7 @@ export default {
   box-sizing: border-box;
 
   @include responsive(0, $mobile) {
+    margin-top: -1vh;
     padding: 60px 0;
   }
 
@@ -217,6 +218,7 @@ export default {
     min-height: 110vh;
     padding: 120px 0;
     position: relative;
+    margin-top: -20vh;
     z-index: 3;
   }
 

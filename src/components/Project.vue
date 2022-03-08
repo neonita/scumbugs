@@ -166,7 +166,7 @@ export default {
 }
 
 .convo {
-  // grid-column: 2 / 11; // ref _layout.scss // 12 cols // actually does nothing due to display: block override in Scene.vue line 221
+  // grid-column: 2 / 11; // ref _layout.scss // 12 cols // actually does nothing due to display: block's override in Scene.vue line 227
   margin: 0;
   padding: 0;
 
