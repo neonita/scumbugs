@@ -209,7 +209,7 @@ export default {
   box-sizing: border-box;
 
   @include responsive(0, $mobile) {
-    margin-top: -5vh;
+    // margin-top: -5vh;
     padding: 60px 0;
   }
 
@@ -218,7 +218,7 @@ export default {
     min-height: 110vh;
     padding: 120px 0;
     position: relative;
-    margin-top: -20vh;
+    // margin-top: -20vh;
     z-index: 3;
   }
 
@@ -247,6 +247,10 @@ export default {
   p:nth-of-type(2) {
     grid-column: 7 / -1;
   }
+}
+
+.intro {
+  margin-top: -20vh;
 }
 
 .image {
