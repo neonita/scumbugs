@@ -26,7 +26,7 @@
       />
     </div>
   </section>
-  <Project />
+  <Origin />
   <BugsGrid />
   <Roadmap />
   <GenerativeArtwork />
@@ -42,7 +42,7 @@ import BugsGrid from "./BugsGrid.vue";
 import Team from "./Team.vue";
 import GenerativeArtwork from "./GenerativeArtwork.vue";
 import Roadmap from "./Roadmap.vue";
-import Project from "./Project.vue";
+import Origin from "./Origin.vue";
 
 export default {
   data() {
@@ -67,7 +67,7 @@ export default {
     Team,
     GenerativeArtwork,
     Roadmap,
-    Project,
+    Origin,
   },
   methods: {
     initializeGsap() {
@@ -250,6 +250,7 @@ export default {
 }
 
 .intro {
+  min-height: 70vh;
   margin-top: -20vh;
 }
 

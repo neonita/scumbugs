@@ -8,8 +8,8 @@
       <nav>
         <ul>
           <li>
-            <a @click.prevent="scrollTo" href="#project" data-target="project"
-              >The project</a
+            <a @click.prevent="scrollTo" href="#origin" data-target="origin"
+              >Origin</a
             >
           </li>
           <li>

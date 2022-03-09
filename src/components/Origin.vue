@@ -1,7 +1,7 @@
 <template>
-  <section class="text intro" id="project">
+  <section class="text intro" id="origin">
     <div class="lw">
-      <!-- <h1 class="title">Scumbugs project</h1> -->
+      <!-- <h1 class="title">Scumbugs Origins</h1> -->
       <ul class="convo">
         <li class="convo__element">
           <div class="convo__avatar">
