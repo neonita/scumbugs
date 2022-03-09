@@ -1,5 +1,22 @@
 <template>
-  <section class="bugs" id="about">
+  <section class="text about" id="about">
+    <div class="lw">
+      <h2 class="title">Scumbugs</h2>
+      <p>
+        Scumbugs is a collection of 15,341 unique on-chain bugs infesting the
+        Ethereum Network. Bred at the intersection of generative art and
+        creative coding, each scumbug is generated with randomly seeded values,
+        issued at the moment of an NFT mint transaction hash.
+      </p>
+      <p>
+        There are 6 species of Scumbugs: Mantis, Caterpillar, Snail, Mosquito,
+        Fly, and Moth.
+      </p>
+    </div>
+  </section>
+
+  <section class="bugs">
+    <!-- Scumbugs grid 100vh -->
     <ul>
       <li class="bug-1"><img :src="bugs[0]" /></li>
       <li class="bug-2"><img :src="bugs[1]" /></li>
@@ -8,6 +25,40 @@
       <li class="bug-5"><img :src="bugs[4]" /></li>
       <li class="bug-6"><img :src="bugs[5]" /></li>
     </ul>
+  </section>
+
+  <section class="text about">
+    <div class="lw">
+      <!-- content -->
+      <ul>
+        <li>
+          Each scumbug has a unique look - the result of a randomized
+          combination of seven character attributes.
+        </li>
+        <li>
+          Each scumbug has a unique stare showcasing an exclusive generative
+          work of art.
+        </li>
+        <li>
+          Each scumbug has its own birthday, as all 15,341 insects emerged from
+          their eggs between January 1st, 1980, and December 31st, 2021.
+        </li>
+        <li>
+          Each scumbug’s metadata is 100% stored on the Ethereum blockchain and
+          its artwork is hosted permanently on the Arweave blockchain.
+        </li>
+        <li>
+          341 Scumbugs will be reserved for giveaways, incentives for hirings,
+          and other purposes that help grow and sustain the project.
+        </li>
+        <li>
+          The Scumbugs collection and its digital universe is the genesis
+          project of (lab name). Building a strong IP (intellectual property)
+          for the Scumbugs universe will remain the top priority when exploring
+          further cyber-ecosystem development.
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 
@@ -49,6 +100,11 @@ export default {
 </script>
 
 <style lang="scss">
+.text.about {
+  background: #f6f7da;
+}
+
+// ======= BUGS =============================
 .bugs {
   ul {
     display: grid;
@@ -131,5 +187,5 @@ export default {
       }
     }
   }
-}
+} // .bugs
 </style>

@@ -9,7 +9,7 @@
           </div>
           <div class="convo__thread">
             <div class="convo__user">
-              <span class="convo__name og_snail">·ï¡÷¡ï· og_snail ·ï¡÷¡ï·</span>
+              <span class="convo__name og_snail">og_snail</span>
               <span class="convo__timestamp">03/08/2022</span>
             </div>
             <div class="convo__text">
@@ -67,7 +67,7 @@
           </div>
           <div class="convo__thread">
             <div class="convo__user">
-              <span class="convo__name og_snail">·ï¡÷¡ï· og_snail ·ï¡÷¡ï·</span>
+              <span class="convo__name og_snail">og_snail</span>
               <span class="convo__timestamp">03/08/2022</span>
             </div>
             <div class="convo__text">
@@ -76,53 +76,8 @@
                 pest. I just buzzed you in, c’mon up and make sure to wipe all
                 of your dusty feet on the rug before you enter my home bub
               </p>
-              <!-- <p class="bold">ABOUT <span class="italic">SCUMBUGS</span></p>
-            <p>
-              Scumbugs is a collection of 15,341 unique on-chain bugs infesting
-              the Ethereum Network. Bred at the intersection of generative art
-              and creative coding, each scumbug is generated with randomly
-              seeded values, issued at the moment of an NFT mint transaction
-              hash.
-            </p>
-            <ul>
-              <li>
-                There are 6 species of Scumbugs: Mantis, Caterpillar, Snail,
-                Mosquito, Fly, and Moth.
-              </li>
-              <li>
-                Each scumbug has a unique look - the result of a randomized
-                combination of seven character attributes.
-              </li>
-              <li>
-                Each scumbug has a unique stare showcasing an exclusive
-                generative work of art.
-              </li>
-              <li>
-                Each scumbug has its own birthday, as all 15,341 insects emerged
-                from their eggs between January 1st, 1980, and December 31st,
-                2021.
-              </li>
-              <li>
-                Each scumbug’s metadata is 100% stored on the Ethereum
-                blockchain and its artwork is hosted permanently on the Arweave
-                blockchain.
-              </li>
-              <li>
-                341 Scumbugs will be reserved for giveaways, incentives for
-                hirings, and other purposes that help grow and sustain the
-                project.
-              </li>
-              <li>
-                The Scumbugs collection and its digital universe is the genesis
-                project of (lab name). Building a strong IP (intellectual
-                property) for the Scumbugs universe will remain the top priority
-                when exploring further cyber-ecosystem development.
-              </li>
-            </ul> -->
-              <!-- /.convo__text -->
             </div>
           </div>
-          <!-- /. convo__element -->
         </li>
       </ul>
     </div>
