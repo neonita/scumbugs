@@ -1,5 +1,5 @@
 <template>
-  <section class="bugs" id="bugs">
+  <section class="bugs" id="about">
     <ul>
       <li class="bug-1"><img :src="bugs[0]" /></li>
       <li class="bug-2"><img :src="bugs[1]" /></li>
@@ -12,25 +12,24 @@
 </template>
 
 <script>
-
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
   data() {
     return {
       bugs: [
-        require('@/assets/bugs/bug1.svg'),
-        require('@/assets/bugs/bug2.svg'),
-        require('@/assets/bugs/bug3.svg'),
-        require('@/assets/bugs/bug4.svg'),
-        require('@/assets/bugs/bug5.svg'),
-        require('@/assets/bugs/bug6.svg'),
-      ]
-    }
+        require("@/assets/bugs/bug1.svg"),
+        require("@/assets/bugs/bug2.svg"),
+        require("@/assets/bugs/bug3.svg"),
+        require("@/assets/bugs/bug4.svg"),
+        require("@/assets/bugs/bug5.svg"),
+        require("@/assets/bugs/bug6.svg"),
+      ],
+    };
   },
-  mounted: function() {
+  mounted: function () {
     // this.bugs.forEach((bug, index) => {
     //   gsap.to(`.bugs .bug-${index + 1}`, {
     //     // transform: 'translateY(0)',
@@ -42,11 +41,11 @@ export default {
     //       // markers: true,
     //       // scrub: true
     //       toggleClass: 'is-showing',
-    //     }, 
+    //     },
     //   });
     // })
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss">
@@ -79,47 +78,47 @@ export default {
     }
 
     &:nth-child(1) {
-      background: #FFE266;
+      background: #ffe266;
 
       // img {
       //   transform: translateY(50%);
       // }
     }
-    
+
     &:nth-child(2) {
-      background: #F9AF6B;
+      background: #f9af6b;
 
       // img {
       //   transform: translateY(20%);
       // }
     }
-    
+
     &:nth-child(3) {
-      background: #8CE1E5;
+      background: #8ce1e5;
 
       // img {
       //   transform: translateY(70%);
       // }
     }
-    
+
     &:nth-child(4) {
-      background: #ACDD72;
+      background: #acdd72;
 
       // img {
       //   transform: translateY(30%);
       // }
     }
-    
+
     &:nth-child(5) {
-      background: #EF7575;
+      background: #ef7575;
 
       // img {
       //   transform: translateY(40%);
       // }
     }
-    
+
     &:nth-child(6) {
-      background: #FCB4D4;
+      background: #fcb4d4;
 
       // img {
       //   transform: translateY(80%);

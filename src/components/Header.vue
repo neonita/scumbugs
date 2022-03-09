@@ -13,8 +13,8 @@
             >
           </li>
           <li>
-            <a @click.prevent="scrollTo" href="#bugs" data-target="bugs"
-              >The bugs</a
+            <a @click.prevent="scrollTo" href="#about" data-target="about"
+              >About</a
             >
           </li>
           <li>
@@ -32,7 +32,7 @@
           </li>
           <li>
             <a @click.prevent="scrollTo" href="#team" data-target="team"
-              >The team</a
+              >Team</a
             >
           </li>
         </ul>
