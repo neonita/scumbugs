@@ -22,12 +22,63 @@
         yourself in the world of NFT’s but with a hedonistic, counter-culture
         twist that can’t be found anywhere else!
       </p>
+
+      <div class="flyguide">
+        <ResponsiveImage :sources="flyguide" />
+      </div>
     </div>
   </section>
 </template>
 
+<script>
+import ResponsiveImage from "./helpers/ResponsiveImage.vue";
+
+export default {
+  data() {
+    return {
+      flyguide: [
+        require("@/assets/images/scene/road_map_illu.png"),
+        require("@/assets/images/scene/road_map_illu.png"),
+        require("@/assets/images/scene/road_map_illu.png"),
+      ],
+    };
+  },
+  components: {
+    ResponsiveImage,
+  },
+};
+</script>
+
 <style lang="scss">
 .text.road {
   background: #f8dfe8;
+}
+
+.flyguide {
+  overflow: hidden;
+  text-align: right;
+  position: relative;
+  animation: levitate 3s ease-in-out infinite;
+
+  @keyframes levitate {
+    0% {
+      transform: translatey(0px);
+    }
+
+    50% {
+      transform: translatey(-40px);
+    }
+
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  img {
+    width: 22%;
+    height: auto;
+    // transform: rotate(20deg);
+    object-fit: cover;
+  }
 }
 </style>

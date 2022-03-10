@@ -28,6 +28,7 @@
   </section>
 
   <section class="text about">
+    <!-- <div class="lw"> -->
     <div class="lw">
       <!-- content -->
       <ul>
