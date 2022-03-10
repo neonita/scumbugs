@@ -27,38 +27,77 @@
     </ul>
   </section>
 
-  <section class="text about">
-    <!-- <div class="lw"> -->
-    <div class="lw">
-      <!-- content -->
-      <ul>
-        <li>
-          Each scumbug has a unique look - the result of a randomized
-          combination of seven character attributes.
-        </li>
-        <li>
-          Each scumbug has a unique stare showcasing an exclusive generative
-          work of art.
-        </li>
-        <li>
-          Each scumbug has its own birthday, as all 15,341 insects emerged from
-          their eggs between January 1st, 1980, and December 31st, 2021.
-        </li>
-        <li>
-          Each scumbug’s metadata is 100% stored on the Ethereum blockchain and
-          its artwork is hosted permanently on the Arweave blockchain.
-        </li>
-        <li>
-          341 Scumbugs will be reserved for giveaways, incentives for hirings,
-          and other purposes that help grow and sustain the project.
-        </li>
-        <li>
-          The Scumbugs collection and its digital universe is the genesis
-          project of (lab name). Building a strong IP (intellectual property)
-          for the Scumbugs universe will remain the top priority when exploring
-          further cyber-ecosystem development.
-        </li>
-      </ul>
+  <!-- 
+    BULLET POINTS 100vh
+ -->
+  <section class="about">
+    <div class="grid-container">
+      <figure class="finger">
+        <img
+          :src="hand[0]"
+          alt="caterpillar's middle finger"
+          class="finger__img"
+        />
+      </figure>
+
+      <p class="about__p">
+        Each scumbug has a unique look - the result of a randomized combination
+        of seven character attributes.
+      </p>
+
+      <p class="about__p">
+        Each scumbug has its own birthday, as all 15,341 insects emerged from
+        their eggs between January 1st, 1980, and December 31st, 2021.
+      </p>
+
+      <figure class="finger">
+        <img :src="hand[1]" alt="fly's middle finger" class="finger__img" />
+      </figure>
+
+      <figure class="finger">
+        <img :src="hand[2]" alt="mantis's middle finger" class="finger__img" />
+      </figure>
+
+      <p class="about__p">
+        Each scumbug’s metadata is 100% stored on the Ethereum blockchain and
+        its artwork is hosted permanently on the Arweave blockchain.
+      </p>
+
+      <p class="about__p">
+        Each Scumbug is originally made in SVG (Scalable Vector Graphic) - they
+        may eventually become bigger than you! They are displayed as a PNG image
+        for optimal user experience, but the SVG file will be available for all
+        owners.
+      </p>
+
+      <figure class="finger">
+        <img
+          :src="hand[3]"
+          alt="mosquito's middle finger"
+          class="finger__img"
+        />
+      </figure>
+
+      <figure class="finger">
+        <img :src="hand[4]" alt="moth's middle finger" class="finger__img" />
+      </figure>
+
+      <p class="about__p">
+        The Scumbugs collection and its digital universe is the genesis project
+        of (lab name). Building a strong IP (intellectual property) for the
+        Scumbugs universe will remain the top priority when exploring further
+        cyber-ecosystem development.
+      </p>
+
+      <p class="about__p">
+        Scumbugs collectibles is a genesis project actig as a member pass to tge
+        Scumbugs digital universe. The full Scumbugs experience will grow as the
+        Scumbugs community done too.
+      </p>
+
+      <figure class="finger">
+        <img :src="hand[5]" alt="snail's middle finger" class="finger__img" />
+      </figure>
     </div>
   </section>
 </template>
@@ -78,6 +117,14 @@ export default {
         require("@/assets/bugs/bug4.svg"),
         require("@/assets/bugs/bug5.svg"),
         require("@/assets/bugs/bug6.svg"),
+      ],
+      hand: [
+        require("@/assets/svg/bugyou/fuck_mantis.svg"),
+        require("@/assets/svg/bugyou/fuck_mosquito.svg"),
+        require("@/assets/svg/bugyou/fuck_snail.svg"),
+        require("@/assets/svg/bugyou/fuck_caterpi.svg"),
+        require("@/assets/svg/bugyou/fuck_moth.svg"),
+        require("@/assets/svg/bugyou/fuck_fly.svg"),
       ],
     };
   },
@@ -101,7 +148,8 @@ export default {
 </script>
 
 <style lang="scss">
-.text.about {
+.text.about,
+.about {
   background: #f6f7da;
 }
 
@@ -189,4 +237,83 @@ export default {
     }
   }
 } // .bugs
+
+// ======= BULLET POINTS N FINGERS =============================
+.grid-container {
+  display: grid;
+  grid-template-columns: 400px 1fr 1fr 400px;
+  grid-template-rows: repeat(4, auto);
+
+  padding: 5em 0;
+}
+
+.finger {
+  margin: 0;
+  width: auto;
+
+  &__img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.finger:nth-of-type(even),
+.about__p:nth-of-type(even) {
+  margin-top: 5em;
+  text-align: right;
+}
+
+.finger:nth-of-type(odd),
+.about__p:nth-of-type(odd) {
+  margin-top: 0;
+  text-align: left;
+}
+
+.finger {
+  &__img:nth-of-type(odd) {
+    width: 100%;
+  }
+}
+
+.finger:nth-of-type(even) {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.finger:nth-of-type(odd) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.about__p:nth-of-type(even) {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  text-align: right;
+}
+
+.about__p:nth-of-type(odd) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  margin-top: 0em;
+}
+
+.about__p {
+  font-weight: 700;
+}
+
+// .about__p:nth-child(2) {
+//   grid-row-start: 1;
+//   grid-row-end: 2;
+// }
+
+// .about__p:nth-child(4) {
+//   grid-row-start: 3;
+//   grid-row-end: 4;
+// }
+
+// .about__p:nth-child(6) {
+//   grid-row-start: 5;
+//   grid-row-end: 6;
+// }
 </style>
