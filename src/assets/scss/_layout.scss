@@ -3,9 +3,9 @@
 -------------------------------------------------------------------*/
 :root {
   --gg: 30px;
-  --lp: #{$layout-padding};
+  --lp: #{$layout-padding}; // 120px
   --lc: 12;
-  --lw: #{$layout-width};
+  --lw: #{$layout-width}; // 1120px
   --cw: calc(
     ((100vw - (2 * var(--lp))) - ((var(--lc) - 1) * var(--gg))) / var(--lc)
   );

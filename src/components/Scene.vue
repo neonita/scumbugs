@@ -27,7 +27,7 @@
     </div>
   </section>
   <Origin />
-  <BugsGrid />
+  <About />
   <Roadmap />
   <GenerativeArtwork />
   <Team />
@@ -38,7 +38,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 import ResponsiveImage from "./helpers/ResponsiveImage.vue";
-import BugsGrid from "./BugsGrid.vue";
+import About from "./About.vue";
 import Team from "./Team.vue";
 import GenerativeArtwork from "./GenerativeArtwork.vue";
 import Roadmap from "./Roadmap.vue";
@@ -63,7 +63,7 @@ export default {
   },
   components: {
     ResponsiveImage,
-    BugsGrid,
+    About,
     Team,
     GenerativeArtwork,
     Roadmap,

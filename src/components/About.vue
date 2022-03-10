@@ -1,5 +1,5 @@
 <template>
-  <section class="text about-gradient" id="about">
+  <section class="text about-top" id="about">
     <div class="lw">
       <h2 class="title">Scumbugs</h2>
       <p class="about__p1">
@@ -148,26 +148,38 @@ export default {
 </script>
 
 <style lang="scss">
-.text.about-gradient {
+.text.about-top {
   background: rgb(246, 247, 218);
   background: linear-gradient(
     0deg,
     rgba(246, 247, 218, 1) 85%,
     rgba(235, 228, 207, 1) 100%
   );
+
+  border: 7px solid red;
+  min-height: 50vh;
+  padding: 0;
+}
+
+.about-top .lw {
+  border: 1px dashed;
+  max-width: none;
 }
 
 .about {
   background: #f6f7da;
-}
-// ======= SCUMBUGS ABOUT =============================
-.about__p1 {
-  font-weight: 700;
-  line-height: 2rem;
-}
 
-.about__p1:nth-of-type(even) {
-  text-align: right;
+  &__p1,
+  &__p2 {
+    line-height: 1.8rem;
+    font-weight: 500;
+    // color: #707070;
+  }
+
+  &__p1 {
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+  }
 }
 
 // ======= BUGS =============================
@@ -315,9 +327,9 @@ export default {
   margin-top: 0em;
 }
 
-.about__p2 {
-  font-weight: 700;
-}
+// .about__p2 {
+//   font-weight: 700;
+// }
 
 // .about__p2:nth-child(2) {
 //   grid-row-start: 1;
