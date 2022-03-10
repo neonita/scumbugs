@@ -1,14 +1,14 @@
 <template>
-  <section class="text about" id="about">
+  <section class="text about-gradient" id="about">
     <div class="lw">
       <h2 class="title">Scumbugs</h2>
-      <p>
+      <p class="about__p1">
         Scumbugs is a collection of 15,341 unique on-chain bugs infesting the
         Ethereum Network. Bred at the intersection of generative art and
         creative coding, each scumbug is generated with randomly seeded values,
         issued at the moment of an NFT mint transaction hash.
       </p>
-      <p>
+      <p class="about__p1">
         There are 6 species of Scumbugs: Mantis, Caterpillar, Snail, Mosquito,
         Fly, and Moth.
       </p>
@@ -40,12 +40,12 @@
         />
       </figure>
 
-      <p class="about__p">
+      <p class="about__p2">
         Each scumbug has a unique look - the result of a randomized combination
         of seven character attributes.
       </p>
 
-      <p class="about__p">
+      <p class="about__p2">
         Each scumbug has its own birthday, as all 15,341 insects emerged from
         their eggs between January 1st, 1980, and December 31st, 2021.
       </p>
@@ -58,12 +58,12 @@
         <img :src="hand[2]" alt="mantis's middle finger" class="finger__img" />
       </figure>
 
-      <p class="about__p">
+      <p class="about__p2">
         Each scumbug’s metadata is 100% stored on the Ethereum blockchain and
         its artwork is hosted permanently on the Arweave blockchain.
       </p>
 
-      <p class="about__p">
+      <p class="about__p2">
         Each Scumbug is originally made in SVG (Scalable Vector Graphic) - they
         may eventually become bigger than you! They are displayed as a PNG image
         for optimal user experience, but the SVG file will be available for all
@@ -82,14 +82,14 @@
         <img :src="hand[4]" alt="moth's middle finger" class="finger__img" />
       </figure>
 
-      <p class="about__p">
+      <p class="about__p2">
         The Scumbugs collection and its digital universe is the genesis project
         of (lab name). Building a strong IP (intellectual property) for the
         Scumbugs universe will remain the top priority when exploring further
         cyber-ecosystem development.
       </p>
 
-      <p class="about__p">
+      <p class="about__p2">
         Scumbugs collectibles is a genesis project actig as a member pass to tge
         Scumbugs digital universe. The full Scumbugs experience will grow as the
         Scumbugs community done too.
@@ -148,9 +148,26 @@ export default {
 </script>
 
 <style lang="scss">
-.text.about,
+.text.about-gradient {
+  background: rgb(246, 247, 218);
+  background: linear-gradient(
+    0deg,
+    rgba(246, 247, 218, 1) 85%,
+    rgba(235, 228, 207, 1) 100%
+  );
+}
+
 .about {
   background: #f6f7da;
+}
+// ======= SCUMBUGS ABOUT =============================
+.about__p1 {
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+.about__p1:nth-of-type(even) {
+  text-align: right;
 }
 
 // ======= BUGS =============================
@@ -258,13 +275,13 @@ export default {
 }
 
 .finger:nth-of-type(even),
-.about__p:nth-of-type(even) {
+.about__p2:nth-of-type(even) {
   margin-top: 5em;
   text-align: right;
 }
 
 .finger:nth-of-type(odd),
-.about__p:nth-of-type(odd) {
+.about__p2:nth-of-type(odd) {
   margin-top: 0;
   text-align: left;
 }
@@ -285,34 +302,34 @@ export default {
   grid-column-end: 2;
 }
 
-.about__p:nth-of-type(even) {
+.about__p2:nth-of-type(even) {
   grid-column-start: 3;
   grid-column-end: 4;
   text-align: right;
 }
 
-.about__p:nth-of-type(odd) {
+.about__p2:nth-of-type(odd) {
   grid-column-start: 2;
   grid-column-end: 3;
 
   margin-top: 0em;
 }
 
-.about__p {
+.about__p2 {
   font-weight: 700;
 }
 
-// .about__p:nth-child(2) {
+// .about__p2:nth-child(2) {
 //   grid-row-start: 1;
 //   grid-row-end: 2;
 // }
 
-// .about__p:nth-child(4) {
+// .about__p2:nth-child(4) {
 //   grid-row-start: 3;
 //   grid-row-end: 4;
 // }
 
-// .about__p:nth-child(6) {
+// .about__p2:nth-child(6) {
 //   grid-row-start: 5;
 //   grid-row-end: 6;
 // }
