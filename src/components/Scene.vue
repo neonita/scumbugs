@@ -79,6 +79,22 @@ export default {
     window.addEventListener('resize', () => {
       this.setScrollerHeight()
     })
+
+    document.onreadystatechange = () => {
+      if (document.readyState == "complete") {
+        this.setScrollerHeight()
+      }
+    }
+
+    // const sizeInterval = setInterval(() => {
+    //   this.setScrollerHeight()
+    // }, 100);
+
+    // setTimeout(() => {
+    //   clearInterval(sizeInterval)
+    // }, 2000);
+
+
   },
   methods: {
     initializeGsap() {
@@ -117,6 +133,8 @@ export default {
           toggleClass: "content__scroller--sticky",
         },
       });
+
+
     },
     enabledScroll() {
       if (this.topSceneLoaded && this.mainSceneLoaded) {
@@ -148,10 +166,15 @@ export default {
 @import "@/assets/scss/mixins";
 
 .content {
+  overflow: hidden;
   position: relative;
 
   &__scroller {
     position: relative;
+
+    &__inner {
+      overflow: hidden;
+    }
 
     &--sticky {
       .content__scroller__inner {
