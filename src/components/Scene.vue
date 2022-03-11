@@ -76,7 +76,9 @@ export default {
     Origin,
   },
   mounted() {
-    window.addEventListener('resize', this.setScrollerHeight())
+    window.addEventListener('resize', () => {
+      this.setScrollerHeight()
+    })
   },
   methods: {
     initializeGsap() {
