@@ -156,8 +156,8 @@ export default {
   );
 
   // border: 7px solid red;
-  min-height: 50vh;
-  // padding: 0;
+  min-height: 70vh;
+  padding: 15em 0;
 }
 
 @keyframes marquee {
