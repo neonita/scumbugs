@@ -142,7 +142,6 @@ export default {
 
   li {
     list-style: disc;
-    // margin-bottom: 0.75em;
     margin-bottom: 1.5em;
   }
 

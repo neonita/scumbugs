@@ -66,7 +66,7 @@ export default {
     }
 
     50% {
-      transform: translatey(-40px);
+      transform: translatey(-35px);
     }
 
     100% {
