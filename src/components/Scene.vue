@@ -1,36 +1,42 @@
 <template>
-  <section class="scene">
-    <div class="scene__button_container">
-      <h1 class="scene__title">
-        Once upon a time, deep in the sun-kissed meadow...
-      </h1>
+  <section class="content">
+    <div class="content__scroller" ref="scroll">
+      <div class="content__scroller__inner" ref="scrollInner">
+        <section class="scene">
+          <div class="scene__button_container">
+            <h1 class="scene__title">
+              Once upon a time, deep in the sun-kissed meadow...
+            </h1>
+          </div>
+          <div class="scene__top">
+            <ResponsiveImage
+              :sources="topScene"
+              :on-image-loaded="
+                () => {
+                  topSceneLoaded = true;
+                }
+              "
+            />
+          </div>
+          <div class="scene__main">
+            <ResponsiveImage
+              :sources="mainScene"
+              :on-image-loaded="
+                () => {
+                  mainSceneLoaded = true;
+                }
+              "
+            />
+          </div>
+        </section>
+        <Origin />
+      </div>
     </div>
-    <div class="scene__top">
-      <ResponsiveImage
-        :sources="topScene"
-        :on-image-loaded="
-          () => {
-            topSceneLoaded = true;
-          }
-        "
-      />
-    </div>
-    <div class="scene__main">
-      <ResponsiveImage
-        :sources="mainScene"
-        :on-image-loaded="
-          () => {
-            mainSceneLoaded = true;
-          }
-        "
-      />
-    </div>
+    <About />
+    <Roadmap />
+    <GenerativeArtwork />
+    <Team />
   </section>
-  <Origin />
-  <About />
-  <Roadmap />
-  <GenerativeArtwork />
-  <Team />
 </template>
 <script>
 import { gsap } from "gsap";
@@ -53,9 +59,9 @@ export default {
         require("@/assets/images/scene/top_scene_large.png"),
       ],
       mainScene: [
-        require("@/assets/images/scene/illu_website_main_v2.png"),
-        require("@/assets/images/scene/illu_website_main_v2.png"),
-        require("@/assets/images/scene/illu_website_main_v2.png"),
+        require("@/assets/images/scene/main_scene_mobile.png"),
+        require("@/assets/images/scene/main_scene_desktop.png"),
+        require("@/assets/images/scene/main_scene_large.png"),
       ],
       topSceneLoaded: false,
       mainSceneLoaded: false,
@@ -68,6 +74,9 @@ export default {
     GenerativeArtwork,
     Roadmap,
     Origin,
+  },
+  mounted() {
+    window.addEventListener('resize', this.setScrollerHeight())
   },
   methods: {
     initializeGsap() {
@@ -88,23 +97,35 @@ export default {
 
       gsap.to(".scene__top", {
         opacity: 0,
-        // height: '10vh',
         ease: "none",
         scrollTrigger: {
           trigger: ".scene",
           start: "top top",
           end: "30% top",
-          // markers: true,
           scrub: true,
+        },
+      });
+
+      gsap.to(".content__scroller", {
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".content__scroller",
+          start: "bottom bottom",
+          end: "bottom top",
+          toggleClass: "content__scroller--sticky",
         },
       });
     },
     enabledScroll() {
       if (this.topSceneLoaded && this.mainSceneLoaded) {
         this.initializeGsap();
+        this.setScrollerHeight();
         document.body.style.overflow = "auto";
       }
     },
+    setScrollerHeight() {
+      this.$refs.scroll.style.height = `${this.$refs.scrollInner.clientHeight}px`;
+    }
   },
   watch: {
     topSceneLoaded() {
@@ -123,6 +144,22 @@ export default {
 <style lang="scss">
 @import "@/assets/scss/variables";
 @import "@/assets/scss/mixins";
+
+.content {
+  position: relative;
+
+  &__scroller {
+    position: relative;
+
+    &--sticky {
+      .content__scroller__inner {
+        bottom: 0;
+        position: fixed;
+      }
+    }
+  }
+
+}
 
 .scene {
   position: relative;
@@ -251,7 +288,8 @@ export default {
 
 .intro {
   min-height: 70vh;
-  margin-top: -20vh;
+  margin-top: -12vw;
+  padding-top: 8vw;
 }
 
 .image {
