@@ -1,6 +1,7 @@
 <template>
   <!-- ABOUT CARD -->
   <section class="text about-top" id="about">
+    <div class="banner"></div>
     <div class="lw">
       <h2 class="title">Scumbugs</h2>
       <p class="about__p1">
@@ -16,7 +17,7 @@
     </div>
   </section>
 
-  <!-- SCUMBUGS GRID 100vh -->
+  <!-- SCUMBUGS GRID 100vw -->
   <section class="bugs">
     <ul>
       <li class="bug-1"><img :src="bugs[0]" /></li>
@@ -31,32 +32,26 @@
   <!-- BULLET POINTS 100vh -->
   <section class="container">
     <div class="hand-grid">
-      <!--   Mantis   -->
       <figure class="hand-grid__finger">
         <img :src="hand[0]" alt="mantis" />
       </figure>
 
-      <!--   Fly   -->
       <figure class="hand-grid__finger">
         <img :src="hand[1]" alt="fly" />
       </figure>
 
-      <!--   Snail   -->
       <figure class="hand-grid__finger">
         <img :src="hand[2]" alt="snail" />
       </figure>
 
-      <!--   Caterpillar   -->
       <figure class="hand-grid__finger">
         <img :src="hand[3]" alt="caterpillar" />
       </figure>
 
-      <!--   Moth   -->
       <figure class="hand-grid__finger">
         <img :src="hand[4]" alt="moth" />
       </figure>
 
-      <!--   Mosquito   -->
       <figure class="hand-grid__finger">
         <img :src="hand[5]" alt="mosquito" />
       </figure>
@@ -126,6 +121,7 @@ export default {
         require("@/assets/svg/bugyou/fuck_moth.svg"),
         require("@/assets/svg/bugyou/fuck_fly.svg"),
       ],
+      // banner: [require("@/assets/images/scene/tag_banner.png")],
     };
   },
   mounted: function () {
@@ -149,6 +145,9 @@ export default {
 
 <style lang="scss">
 .text.about-top {
+  display: flex;
+  flex-direction: column;
+
   background: rgb(246, 247, 218);
   background: linear-gradient(
     0deg,
@@ -156,25 +155,42 @@ export default {
     rgba(235, 228, 207, 1) 100%
   );
 
-  border: 7px solid red;
-  min-height: 50vh;
-  padding: 0;
+  // border: 7px solid red;
+  min-height: 70vh;
+  padding: 15em 0;
+}
+
+@keyframes marquee {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 5000%;
+  }
+}
+
+.banner {
+  animation: marquee 1000s linear infinite;
+  background-image: url(../assets/images/scene/tag_banner.png);
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
 }
 
 .about-top .lw {
-  border: 1px dashed;
   max-width: none;
+  // border: 1px dashed;
 }
 
 .about {
   background: #f6f7da;
 
-  &__p1,
-  &__p2 {
-    font-weight: 500;
-  }
-
   &__p1 {
+    font-weight: 500;
     font-size: 1.7rem;
     line-height: 2.8rem;
   }
@@ -293,7 +309,7 @@ export default {
   // border: 2px solid red;
 
   &__finger {
-    width: 45%;
+    width: 42%;
     height: auto;
     // border: 2.5px dashed lightgrey;
     margin: 0;
@@ -304,6 +320,8 @@ export default {
     grid-column-end: 3;
     justify-self: end;
     padding-top: 2em;
+    position: relative;
+    top: 35%;
   }
 
   &__finger:nth-of-type(odd) {
@@ -311,6 +329,8 @@ export default {
     grid-column-end: 2;
     justify-self: start;
     // padding-top: 2em;
+    position: relative;
+    top: 35%;
   }
 }
 
@@ -324,7 +344,7 @@ export default {
   margin: 0 auto;
   width: 55vw;
 
-  border: 1px solid pink;
+  // border: 1px solid pink;
 
   display: grid;
   // grid-template-columns: repeat(2, 1fr);
@@ -336,7 +356,7 @@ export default {
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 2rem;
-    color: grey;
+    // color: grey;
   }
 
   &__text:nth-of-type(even) {

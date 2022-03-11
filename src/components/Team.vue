@@ -7,7 +7,14 @@
           <ResponsiveImage :sources="member.image" :alt="member.name" />
         </div>
         <h3 class="title">{{ member.name }}</h3>
-        <p class="description">{{ member.description }}</p>
+        <ul class="description">
+          <li>{{ member.description[0] }}</li>
+          <li>{{ member.description[1] }}</li>
+          <li>{{ member.description[2] }}</li>
+          <li>{{ member.description[3] }}</li>
+          <li>{{ member.description[4] }}</li>
+          <li>{{ member.description[5] }}</li>
+        </ul>
       </li>
     </ul>
   </section>
@@ -21,8 +28,13 @@ export default {
       team: [
         {
           name: "Bruno",
-          description:
-            "A mischiveous fly, the ultimate scum of scums. The Brunoest of Brunos. We don't talk about them. But it was our wedding day, we were getting ready and there wasn't a cloud in the sky--no clouds allowed in the sky. Bruno hovers in with a mischiveous grin--THUNDER!...",
+          description: [
+            "Mischievous Fly",
+            "Creative Scumbag / Picky Kid",
+            "Brand Strategist",
+            "Digital Community Builder",
+            "Visionary/ Ref God",
+          ],
           image: [
             require("@/assets/images/team/bruno_desktop.png"),
             require("@/assets/images/team/bruno_desktop.png"),
@@ -31,8 +43,13 @@ export default {
         },
         {
           name: "Wholesum_scum",
-          description:
-            "Lorem ipsum dolor sit amet, cons ec- tetuer adipiscing elit, sed diam nonum- my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+          description: [
+            "Web3 Visionary",
+            "JPEG Addict",
+            "Creative Mind / Braindump King",
+            "Sports & Music Lover",
+            "Passionate <3",
+          ],
           image: [
             require("@/assets/images/team/wholesum_desktop.png"),
             require("@/assets/images/team/wholesum_desktop.png"),
@@ -41,8 +58,12 @@ export default {
         },
         {
           name: "0xtina",
-          description:
-            "Lorem ipsum dolor sit amet, cons ec- tetuer adipiscing elit, sed diam nonum- my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+          description: [
+            "That IT Guy Who Smells Like Soup",
+            "Napoleon Dynamite Ambassador",
+            "Multi-instrumentalist",
+            "Can Kick Gordon Ramsay's Ass In the Kitchen",
+          ],
           image: [
             require("@/assets/images/team/0xtina_desktop.png"),
             require("@/assets/images/team/0xtina_desktop.png"),
@@ -51,8 +72,12 @@ export default {
         },
         {
           name: "Xenobot",
-          description:
-            "Lorem ipsum dolor sit amet, cons ec- tetuer adipiscing elit, sed diam nonum- my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+          description: [
+            "Image Creator and Digital Compositor",
+            "Wacom Pen Adept / Geek",
+            "Emergent Music Lover",
+            "Part-time DJ",
+          ],
           image: [
             require("@/assets/images/team/xenobot_desktop.png"),
             require("@/assets/images/team/xenobot_desktop.png"),
@@ -106,5 +131,15 @@ export default {
     overflow: hidden;
     position: relative;
   }
+}
+
+ul.description {
+  display: block;
+  padding: 0;
+}
+
+.description li {
+  margin-left: 0;
+  padding-left: 0;
 }
 </style>
