@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss">
 // @import url('https://fonts.googleapis.com/css2?family=Acme&family=Roboto:wght@500&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;800&display=swap");
 
 .web3modal-modal-lightbox {
   z-index: 150 !important;

@@ -1,4 +1,5 @@
 <template>
+  <!-- ABOUT CARD -->
   <section class="text about-top" id="about">
     <div class="lw">
       <h2 class="title">Scumbugs</h2>
@@ -15,8 +16,8 @@
     </div>
   </section>
 
+  <!-- SCUMBUGS GRID 100vh -->
   <section class="bugs">
-    <!-- Scumbugs grid 100vh -->
     <ul>
       <li class="bug-1"><img :src="bugs[0]" /></li>
       <li class="bug-2"><img :src="bugs[1]" /></li>
@@ -27,77 +28,76 @@
     </ul>
   </section>
 
-  <!-- 
-    BULLET POINTS 100vh
- -->
-  <section class="about">
-    <div class="grid-container">
-      <figure class="finger">
-        <img
-          :src="hand[0]"
-          alt="caterpillar's middle finger"
-          class="finger__img"
-        />
+  <!-- BULLET POINTS 100vh -->
+  <section class="container">
+    <div class="hand-grid">
+      <!--   Mantis   -->
+      <figure class="hand-grid__finger">
+        <img :src="hand[0]" alt="mantis" />
       </figure>
 
-      <p class="about__p2">
-        Each scumbug has a unique look - the result of a randomized combination
-        of seven character attributes.
-      </p>
-
-      <p class="about__p2">
-        Each scumbug has its own birthday, as all 15,341 insects emerged from
-        their eggs between January 1st, 1980, and December 31st, 2021.
-      </p>
-
-      <figure class="finger">
-        <img :src="hand[1]" alt="fly's middle finger" class="finger__img" />
+      <!--   Fly   -->
+      <figure class="hand-grid__finger">
+        <img :src="hand[1]" alt="fly" />
       </figure>
 
-      <figure class="finger">
-        <img :src="hand[2]" alt="mantis's middle finger" class="finger__img" />
+      <!--   Snail   -->
+      <figure class="hand-grid__finger">
+        <img :src="hand[2]" alt="snail" />
       </figure>
 
-      <p class="about__p2">
-        Each scumbug’s metadata is 100% stored on the Ethereum blockchain and
-        its artwork is hosted permanently on the Arweave blockchain.
-      </p>
-
-      <p class="about__p2">
-        Each Scumbug is originally made in SVG (Scalable Vector Graphic) - they
-        may eventually become bigger than you! They are displayed as a PNG image
-        for optimal user experience, but the SVG file will be available for all
-        owners.
-      </p>
-
-      <figure class="finger">
-        <img
-          :src="hand[3]"
-          alt="mosquito's middle finger"
-          class="finger__img"
-        />
+      <!--   Caterpillar   -->
+      <figure class="hand-grid__finger">
+        <img :src="hand[3]" alt="caterpillar" />
       </figure>
 
-      <figure class="finger">
-        <img :src="hand[4]" alt="moth's middle finger" class="finger__img" />
+      <!--   Moth   -->
+      <figure class="hand-grid__finger">
+        <img :src="hand[4]" alt="moth" />
       </figure>
 
-      <p class="about__p2">
-        The Scumbugs collection and its digital universe is the genesis project
-        of (lab name). Building a strong IP (intellectual property) for the
-        Scumbugs universe will remain the top priority when exploring further
-        cyber-ecosystem development.
-      </p>
-
-      <p class="about__p2">
-        Scumbugs collectibles is a genesis project actig as a member pass to tge
-        Scumbugs digital universe. The full Scumbugs experience will grow as the
-        Scumbugs community done too.
-      </p>
-
-      <figure class="finger">
-        <img :src="hand[5]" alt="snail's middle finger" class="finger__img" />
+      <!--   Mosquito   -->
+      <figure class="hand-grid__finger">
+        <img :src="hand[5]" alt="mosquito" />
       </figure>
+    </div>
+
+    <!-- ABOUT POINTS -->
+    <div class="about-grid">
+      <p class="about-grid__text">
+        Each scumbug has a unique look, formed by the haphazard combination of
+        seven character attributes and mystical eyes with a sui generis iris
+        showcasing an exclusive generative artwork;
+      </p>
+
+      <p class="about-grid__text">
+        Each scumbug has its own birthday, as all 15 341 insects were bred
+        between January 1st 1980 and December 31st 2021. Anniversaries, along
+        with a few key Holidays, will mark a special occasion to create a deeper
+        digital bond between the user and its scumbug;
+      </p>
+
+      <p class="about-grid__text">
+        Each scumbug metadata is 100% stored on the Ethereum blockchain and its
+        artwork is hosted permanently on the Arweave blockchain;
+      </p>
+
+      <p class="about-grid__text">
+        Each scumbug is originally made in SVG (Scalable Vector Graphic), so
+        they can eventually become bigger than you. They are displayed as a PNG
+        image for the user experience, but SVG will be available for owners;
+      </p>
+
+      <p class="about-grid__text">
+        15 000 Scumbugs will be released on the drop date, on XXX INSCRIRE DATE
+        XXX. 341 other Scumbugs will be held for giveaways and various events;
+      </p>
+
+      <p class="about-grid__text">
+        Scumbugs collectibles are a genesis project acting as a member pass to
+        the Scumbugs digital universe. The full Scumbugs experience will grow as
+        the Scumbugs community does too;
+      </p>
     </div>
   </section>
 </template>
@@ -171,9 +171,7 @@ export default {
 
   &__p1,
   &__p2 {
-    line-height: 1.8rem;
     font-weight: 500;
-    // color: #707070;
   }
 
   &__p1 {
@@ -267,82 +265,89 @@ export default {
   }
 } // .bugs
 
-// ======= BULLET POINTS N FINGERS =============================
-.grid-container {
+/*
+  - ABOUT BOTTOM CONTAINER ------------------------------
+*/
+.container {
+  height: 120vh;
+  background: #f6f7da;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  // padding: 10em 0;
+}
+
+/*
+  - HAND GRID ------------------------------
+*/
+.hand-grid {
+  position: absolute;
+
+  width: 100vw;
   display: grid;
-  grid-template-columns: 400px 1fr 1fr 400px;
-  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(2, 1fr);
+  // border: 2px solid red;
 
-  padding: 5em 0;
-}
-
-.finger {
-  margin: 0;
-  width: auto;
-
-  &__img {
+  &__finger {
+    width: 45%;
     height: auto;
-    width: 100%;
+    // border: 2.5px dashed lightgrey;
+    margin: 0;
+  }
+
+  &__finger:nth-of-type(even) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: end;
+    padding-top: 2em;
+  }
+
+  &__finger:nth-of-type(odd) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: start;
+    // padding-top: 2em;
   }
 }
 
-.finger:nth-of-type(even),
-.about__p2:nth-of-type(even) {
-  margin-top: 5em;
-  text-align: right;
-}
+/*
+  -- ABOUT GRID ------------------------------
+*/
+.about-grid {
+  position: absolute;
+  // top: 1em;
 
-.finger:nth-of-type(odd),
-.about__p2:nth-of-type(odd) {
-  margin-top: 0;
-  text-align: left;
-}
+  margin: 0 auto;
+  width: 55vw;
 
-.finger {
-  &__img:nth-of-type(odd) {
-    width: 100%;
+  border: 1px solid pink;
+
+  display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 0.5fr);
+
+  &__text {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: grey;
+  }
+
+  &__text:nth-of-type(even) {
+    padding: 2em 0;
+    padding-left: 7em;
+    text-align: right;
+  }
+
+  &__text:nth-of-type(odd) {
+    padding-right: 7em;
+    text-align: left;
   }
 }
-
-.finger:nth-of-type(even) {
-  grid-column-start: 4;
-  grid-column-end: 5;
-}
-
-.finger:nth-of-type(odd) {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
-.about__p2:nth-of-type(even) {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  text-align: right;
-}
-
-.about__p2:nth-of-type(odd) {
-  grid-column-start: 2;
-  grid-column-end: 3;
-
-  margin-top: 0em;
-}
-
-// .about__p2 {
-//   font-weight: 700;
-// }
-
-// .about__p2:nth-child(2) {
-//   grid-row-start: 1;
-//   grid-row-end: 2;
-// }
-
-// .about__p2:nth-child(4) {
-//   grid-row-start: 3;
-//   grid-row-end: 4;
-// }
-
-// .about__p2:nth-child(6) {
-//   grid-row-start: 5;
-//   grid-row-end: 6;
-// }
 </style>
