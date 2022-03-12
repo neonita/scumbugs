@@ -108,7 +108,7 @@ export default {
     display: grid;
     gap: 120px;
     grid-template-columns: 1fr 1fr;
-    margin: 60px auto;
+    margin: 40px auto;
     max-width: 900px;
     padding: 0 var(--lp);
 
@@ -123,6 +123,17 @@ export default {
 
     .title {
       font-size: clamp(20px, 4vw, 40px);
+    }
+
+    @include responsive(0, $mobile) {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.5rem;
+
+      .title {
+        font-size: 1.6rem;
+      }
     }
   }
 

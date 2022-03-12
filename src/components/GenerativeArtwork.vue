@@ -239,5 +239,13 @@ export default {
       }
     }
   }
+
+  @include responsive(0, $mobile) {
+    p {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 2rem;
+    }
+  }
 }
 </style>

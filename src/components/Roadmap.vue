@@ -50,8 +50,19 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/assets/scss/variables";
+@import "@/assets/scss/mixins";
+
 .text.road {
   background: #f8dfe8;
+
+  @include responsive(0, $mobile) {
+    p {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 2rem;
+    }
+  }
 }
 
 .flyguide {
@@ -66,7 +77,7 @@ export default {
     }
 
     50% {
-      transform: translatey(-35px);
+      transform: translatey(-32px);
     }
 
     100% {
