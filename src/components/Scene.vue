@@ -76,15 +76,15 @@ export default {
     Origin,
   },
   mounted() {
-    window.addEventListener('resize', () => {
-      this.setScrollerHeight()
-    })
+    window.addEventListener("resize", () => {
+      this.setScrollerHeight();
+    });
 
     document.onreadystatechange = () => {
       if (document.readyState == "complete") {
-        this.setScrollerHeight()
+        this.setScrollerHeight();
       }
-    }
+    };
 
     // const sizeInterval = setInterval(() => {
     //   this.setScrollerHeight()
@@ -93,8 +93,6 @@ export default {
     // setTimeout(() => {
     //   clearInterval(sizeInterval)
     // }, 2000);
-
-
   },
   methods: {
     initializeGsap() {
@@ -133,8 +131,6 @@ export default {
           toggleClass: "content__scroller--sticky",
         },
       });
-
-
     },
     enabledScroll() {
       if (this.topSceneLoaded && this.mainSceneLoaded) {
@@ -145,7 +141,7 @@ export default {
     },
     setScrollerHeight() {
       this.$refs.scroll.style.height = `${this.$refs.scrollInner.clientHeight}px`;
-    }
+    },
   },
   watch: {
     topSceneLoaded() {
@@ -183,7 +179,6 @@ export default {
       }
     }
   }
-
 }
 
 .scene {

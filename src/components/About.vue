@@ -1,8 +1,8 @@
 <template>
   <!-- ABOUT CARD -->
   <section class="text about-top" id="about">
-    <div class="banner"></div>
     <div class="lw">
+      <div class="banner"></div>
       <h2 class="title">Scumbugs</h2>
       <p class="about__p1">
         Scumbugs is a collection of 15,341 unique on-chain bugs infesting the
@@ -65,6 +65,10 @@
         showcasing an exclusive generative artwork;
       </p>
 
+      <figure class="about-grid__finger">
+        <img :src="hand[0]" alt="mantis" />
+      </figure>
+
       <p class="about-grid__text">
         Each scumbug has its own birthday, as all 15 341 insects were bred
         between January 1st 1980 and December 31st 2021. Anniversaries, along
@@ -72,10 +76,18 @@
         digital bond between the user and its scumbug;
       </p>
 
+      <figure class="about-grid__finger">
+        <img :src="hand[1]" alt="fly" />
+      </figure>
+
       <p class="about-grid__text">
         Each scumbug metadata is 100% stored on the Ethereum blockchain and its
         artwork is hosted permanently on the Arweave blockchain;
       </p>
+
+      <figure class="about-grid__finger">
+        <img :src="hand[2]" alt="snail" />
+      </figure>
 
       <p class="about-grid__text">
         Each scumbug is originally made in SVG (Scalable Vector Graphic), so
@@ -83,16 +95,28 @@
         image for the user experience, but SVG will be available for owners;
       </p>
 
+      <figure class="about-grid__finger">
+        <img :src="hand[3]" alt="caterpillar" />
+      </figure>
+
       <p class="about-grid__text">
         15 000 Scumbugs will be released on the drop date, on XXX INSCRIRE DATE
         XXX. 341 other Scumbugs will be held for giveaways and various events;
       </p>
+
+      <figure class="about-grid__finger">
+        <img :src="hand[4]" alt="moth" />
+      </figure>
 
       <p class="about-grid__text">
         Scumbugs collectibles are a genesis project acting as a member pass to
         the Scumbugs digital universe. The full Scumbugs experience will grow as
         the Scumbugs community does too;
       </p>
+
+      <figure class="about-grid__finger">
+        <img :src="hand[5]" alt="mosquito" />
+      </figure>
     </div>
   </section>
 </template>
@@ -121,7 +145,6 @@ export default {
         require("@/assets/svg/bugyou/fuck_moth.svg"),
         require("@/assets/svg/bugyou/fuck_fly.svg"),
       ],
-      // banner: [require("@/assets/images/scene/tag_banner.png")],
     };
   },
   mounted: function () {
@@ -144,10 +167,12 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/assets/scss/variables";
+@import "@/assets/scss/mixins";
+
 .text.about-top {
   display: flex;
   flex-direction: column;
-
   background: rgb(246, 247, 218);
   background: linear-gradient(
     0deg,
@@ -158,45 +183,79 @@ export default {
   // border: 7px solid red;
   min-height: 70vh;
   padding: 15em 0;
-}
 
-@keyframes marquee {
-  0% {
-    background-position: 0;
+  @include responsive(0, $mobile) {
+    padding: 5em 0;
   }
 
-  100% {
-    background-position: 5000%;
+  @keyframes marquee {
+    0% {
+      background-position: 0;
+    }
+
+    100% {
+      background-position: 5000%;
+    }
+  }
+
+  .banner {
+    animation: marquee 700s linear infinite;
+    background-image: url(../assets/images/scene/tag_banner.png);
+    background-color: transparent;
+    background-repeat: repeat-x;
+    width: 100vw;
+    height: 70px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    // transform: rotate(15deg);
+    // border: 1px solid;
+
+    @include responsive(0, $mobile) {
+      animation-duration: 2000s;
+      width: 100vw;
+      margin-bottom: 2em;
+    }
+  }
+
+  .about-top .lw {
+    max-width: none;
+  }
+
+  .about {
+    background: #f6f7da;
+
+    &__p1 {
+      font-weight: 500;
+      font-size: 1.7rem;
+      line-height: 2.8rem;
+    }
+  }
+
+  @include responsive(0, $mobile) {
+    .text.about-top {
+      padding: 7em 0;
+    }
+
+    .lw {
+      // background: red;
+      background: rgb(246, 247, 218);
+    }
+
+    .about__p1 {
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+
+    .title {
+      margin-top: 2em;
+    }
   }
 }
 
-.banner {
-  animation: marquee 1000s linear infinite;
-  background-image: url(../assets/images/scene/tag_banner.png);
-  background-repeat: repeat-x;
-  width: 100%;
-  height: 60px;
-  position: absolute;
-  top: 0;
-  z-index: 10;
-}
-
-.about-top .lw {
-  max-width: none;
-  // border: 1px dashed;
-}
-
-.about {
-  background: #f6f7da;
-
-  &__p1 {
-    font-weight: 500;
-    font-size: 1.7rem;
-    line-height: 2.8rem;
-  }
-}
-
-// ======= BUGS =============================
+// -- BUGS ----------------------------------
 .bugs {
   ul {
     display: grid;
@@ -279,7 +338,7 @@ export default {
       }
     }
   }
-} // .bugs
+}
 
 /*
   - ABOUT BOTTOM CONTAINER ------------------------------
@@ -295,79 +354,122 @@ export default {
   position: relative;
 
   // padding: 10em 0;
-}
 
-/*
+  /*
   - HAND GRID ------------------------------
-*/
-.hand-grid {
-  position: absolute;
+  */
+  .hand-grid {
+    position: absolute;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // border: 2px solid red;
 
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  // border: 2px solid red;
+    &__finger {
+      width: 42%;
+      height: auto;
+      margin: 0;
+      // border: 2.5px dashed lightgrey;
+    }
 
-  &__finger {
-    width: 42%;
-    height: auto;
-    // border: 2.5px dashed lightgrey;
-    margin: 0;
+    &__finger:nth-of-type(even) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      justify-self: end;
+      padding-top: 2em;
+      position: relative;
+      top: 35%;
+    }
+
+    &__finger:nth-of-type(odd) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      justify-self: start;
+      // padding-top: 2em;
+      position: relative;
+      top: 35%;
+    }
   }
 
-  &__finger:nth-of-type(even) {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    justify-self: end;
-    padding-top: 2em;
-    position: relative;
-    top: 35%;
-  }
-
-  &__finger:nth-of-type(odd) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    justify-self: start;
-    // padding-top: 2em;
-    position: relative;
-    top: 35%;
-  }
-}
-
-/*
+  /*
   -- ABOUT GRID ------------------------------
 */
-.about-grid {
-  position: absolute;
-  // top: 1em;
+  .about-grid {
+    position: absolute;
+    margin: 0 auto;
+    width: 55vw;
 
-  margin: 0 auto;
-  width: 55vw;
+    // border: 1px solid pink;
 
-  // border: 1px solid pink;
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 0.5fr);
 
-  display: grid;
-  // grid-template-columns: repeat(2, 1fr);
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 0.5fr);
+    &__text {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 2rem;
+      // color: grey;
+    }
 
-  &__text {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 2rem;
-    // color: grey;
+    &__text:nth-of-type(even) {
+      padding: 2em 0;
+      padding-left: 7em;
+      text-align: right;
+    }
+
+    &__text:nth-of-type(odd) {
+      padding-right: 7em;
+      text-align: left;
+    }
+
+    &__finger {
+      display: none;
+    }
   }
 
-  &__text:nth-of-type(even) {
-    padding: 2em 0;
-    padding-left: 7em;
-    text-align: right;
-  }
+  @include responsive(0, $mobile) {
+    padding-bottom: 8em;
 
-  &__text:nth-of-type(odd) {
-    padding-right: 7em;
-    text-align: left;
+    .hand-grid {
+      display: none;
+    }
+
+    .about-grid {
+      grid-template-rows: repeat(3, 0.5fr 0.5fr);
+      width: 100vw;
+      // position: relative;
+      top: 5%;
+
+      &__text {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+      }
+
+      &__text:nth-of-type(even) {
+        padding: 1em 2em 0 0;
+        padding-left: 2em;
+      }
+
+      &__text:nth-of-type(odd) {
+        padding: 0 2em;
+      }
+
+      &__finger {
+        display: block;
+        margin: 0;
+
+        img {
+          width: 25%;
+        }
+      }
+
+      &__finger:nth-of-type(even) {
+        text-align: right;
+      }
+    }
   }
 }
 </style>
