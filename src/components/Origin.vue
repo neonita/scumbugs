@@ -120,6 +120,11 @@ export default {
   font-style: italic;
 }
 
+.text p {
+  font-weight: 400;
+  font-size: none;
+}
+
 .convo {
   // grid-column: 2 / 11; // ref _layout.scss // 12 cols // actually does nothing due to display: block's override in Scene.vue line 227
   margin: 0;
@@ -127,7 +132,6 @@ export default {
 
   p,
   ul {
-    line-height: 1.2;
     margin-bottom: 1em;
     color: rgb(61, 61, 61);
   }

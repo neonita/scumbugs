@@ -304,6 +304,12 @@ export default {
   p:nth-of-type(2) {
     grid-column: 7 / -1;
   }
+
+  // p {
+  //   font-weight: 500;
+  //   font-size: 1.2rem;
+  //   line-height: 2rem;
+  // }
 }
 
 .intro {

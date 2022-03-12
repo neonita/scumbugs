@@ -205,13 +205,12 @@ export default {
     background-repeat: repeat-x;
     width: 100vw;
     height: 70px;
+    margin-bottom: 2em;
 
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -240px;
+    left: -200px;
     z-index: 10;
-    // transform: rotate(15deg);
-    // border: 1px solid;
 
     @include responsive(0, $mobile) {
       animation-duration: 2000s;
