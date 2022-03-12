@@ -9,7 +9,7 @@
           </div>
           <div class="convo__thread">
             <div class="convo__user">
-              <span class="convo__name og_snail">og_snail</span>
+              <span class="convo__name og_snail">OG_Snail</span>
               <span class="convo__timestamp">03/08/2022</span>
             </div>
             <div class="convo__text">
@@ -67,14 +67,14 @@
           </div>
           <div class="convo__thread">
             <div class="convo__user">
-              <span class="convo__name og_snail">og_snail</span>
+              <span class="convo__name og_snail">OG_Snail</span>
               <span class="convo__timestamp">03/08/2022</span>
             </div>
             <div class="convo__text">
               <p>
-                I was in the midst of explaining something good for nothing
-                pest. I just buzzed you in, c’mon up and make sure to wipe all
-                of your dusty feet on the rug before you enter my home bub
+                I was in the midst of explaining something, you good for nothing
+                pest! C’mon up and make sure to wipe the sand off you before
+                approaching the computer screen...
               </p>
             </div>
           </div>
